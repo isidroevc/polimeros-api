@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41888596359b158dfab88af96e54e316",
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "hash": "da98927dbc1e981424bd4aef864da39c",
+    "content-hash": "c5b8ed05a481c695fe412ee62074c56f",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -459,6 +459,33 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29 18:48:56"
+        },
+        {
+            "name": "krlove/code-generator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/krlove/code-generator.git",
+                "reference": "c1f0cb6898c5e378528c095d54623171e62ee1c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/krlove/code-generator/zipball/c1f0cb6898c5e378528c095d54623171e62ee1c3",
+                "reference": "c1f0cb6898c5e378528c095d54623171e62ee1c3",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Krlove\\CodeGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Code Generator",
+            "time": "2016-04-03 14:09:31"
         },
         {
             "name": "laravel/framework",
@@ -2584,6 +2611,43 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2017-11-27 11:13:29"
+        },
+        {
+            "name": "ur13l/api-crud-generator",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ur13l/api-crud-generator.git",
+                "reference": "d0c4ca7df57afcc765ef7a11402dfd37335e5cdf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ur13l/api-crud-generator/zipball/d0c4ca7df57afcc765ef7a11402dfd37335e5cdf",
+                "reference": "d0c4ca7df57afcc765ef7a11402dfd37335e5cdf",
+                "shasum": ""
+            },
+            "require": {
+                "krlove/code-generator": "^1.0",
+                "laravel/framework": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ur13l\\ApiCrudGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Uriel",
+                    "email": "ur13l.infante@gmail.com"
+                }
+            ],
+            "description": "Controller generator for Laravel based on the models available in your project.",
+            "time": "2018-02-28 18:52:18"
         },
         {
             "name": "vlucas/phpdotenv",
