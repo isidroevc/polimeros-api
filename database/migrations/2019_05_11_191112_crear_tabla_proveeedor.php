@@ -14,7 +14,7 @@ class CrearTablaProveeedor extends Migration
     public function up()
     {
         //
-        Schema::create('proveedor', function(Blueprint $tabla) {
+        Schema::create('proveedor', function(Blueprint $table) {
             $table->string('nombre');
             $table->string('telefono_oficina');
             $table->string('domicilio');
