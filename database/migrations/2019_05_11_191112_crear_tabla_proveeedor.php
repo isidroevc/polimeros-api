@@ -15,13 +15,14 @@ class CrearTablaProveeedor extends Migration
     {
         //
         Schema::create('proveedor', function(Blueprint $table) {
+            $table->increments('id');
             $table->string('nombre');
-            $table->string('telefono_oficina');
+            $table->string('telefonoOficina');
+            $table->string('correoElectronico');
             $table->string('domicilio');
-            $table->string('razon_social');
+            $table->string('razonSocial');
 
-            $table->timestamps();
-            $table->softDeletes();
+            
         });
     }
 
