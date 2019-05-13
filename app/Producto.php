@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Producto extends Model
 {
     //
+    use SoftDeletes;
+    
     protected $table = 'producto';
     public $timestamps = false;
     protected $fillable = [
@@ -19,4 +21,8 @@ class Producto extends Model
         'entradas',
         'salidas',
     ];
+
+    public function proveedor() {
+        return $this->belongsTo('App\Proveedor', 'idProveedor');
+    }
 }
