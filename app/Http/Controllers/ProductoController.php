@@ -67,7 +67,7 @@ class ProductoController extends Controller
         return $data;
     }
 
-    public function registrarMovimiento(Request $reques) {
+    public function registrarMovimiento(Request $request) {
         $data = $request->all();
         $reglas = [
             'idProducto' => 'required',
@@ -76,7 +76,7 @@ class ProductoController extends Controller
         ];
 
         unset($data['id']);
-        $data['fechaHora'] = Carbon::now();
+        $data['fechaHora'] = Carbon::now('America/Mexico_City');;
         $errors = $this->validate($data, $reglas);
         if(count($errors) > 0) {
             return $this->error($errors);

@@ -28,7 +28,7 @@ class Controller extends BaseController
             "success" => false,
             "data" => null,
             "errors" => $errors
-        ));
+        ), 500);
     }
 
     /**
