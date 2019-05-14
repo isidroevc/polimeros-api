@@ -17,4 +17,8 @@ class Movimiento extends Model
     ];
 
     protected $table = 'movimiento';
+
+    public function producto() {
+        return $this->belongsTo('App\Producto', 'idProducto');
+    }
 }

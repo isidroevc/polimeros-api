@@ -85,9 +85,19 @@ class ProductoController extends Controller
     }
 
     public function listarMovimientos(Request $request) {
-        $data = Producto::where('idProducto', $request->idProducto)
-        ->where('tipo', $request->tipo)
-        ->get();
-        return $data;
+
+        $data = Movimiento::query()->with('producto');
+
+        if($request->parametro) {
+            $data = $data->whereRaw('"idProducto" in (select id from producto where nombre like \'%'.$request->parametro.'%\') ');
+            
+        }
+        if ($request->tipo) {
+            $data = $data->where('tipo', $request->tipo);
+        }
+        $data = $data->orderBy('fechaHora', $request->orden);
+        return $data->get();
     }
+
+
 }
